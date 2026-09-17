@@ -26,7 +26,7 @@ I filtered the Kaggle 3M dataset to 168,814 `@AmazonHelp` conversations using Du
 5. `ACCOUNT_PAYMENT_ISSUE`
 6. `FOLLOW_UP`
 
-I sampled exactly 200 stratified interactions to act as the Golden Evaluation Set.
+I sampled exactly 200 interactions, stratified evenly across the 6 discovered clusters to ensure edge cases (like non-English queries) were represented. I then manually hand-labeled all 200 rows with the correct `human_intent`, a binary `human_decision` (AUTO_HANDLE vs ESCALATE), and a brief `human_reason` to serve as our absolute ground truth for the evaluation harness.
 
 ## 4. Baselines vs. Final System
 * **Trivial Baseline:** Always predicts `DELIVERY_STATUS`, always `ESCALATE`, uses a canned reply. (Yielded ~18% Intent Acc).
