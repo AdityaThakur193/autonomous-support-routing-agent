@@ -15,7 +15,7 @@ def evaluate_agent_results(api_key: str):
     
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel(
-        'gemini-3.1-pro-preview', 
+        'gemini-2.5-pro', 
         system_instruction="You are a rigorous QA judge for customer support."
     )
     
@@ -46,7 +46,7 @@ def evaluate_agent_results(api_key: str):
             print(f"Row {idx} | Groundedness: {result.groundedness_score}/5 | Tone: {result.tone_score}/5 | Routing Correct: {result.routing_correct}")
         except Exception as e:
             print(f"Row {idx} | Rate limited or error: {e}")
-        time.sleep(12)  # Respect the 5 RPM limit!
+          # Respect the 5 RPM limit!
 
 if __name__ == "__main__":
     api_key = os.environ.get("GEMINI_API_KEY")
