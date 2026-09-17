@@ -1,0 +1,19 @@
+# Data Processing
+pandas
+duckdb
+pyarrow
+
+# Embeddings & Retrieval
+sentence-transformers
+faiss-cpu
+numpy
+
+# LLM APIs & Structured Output
+google-generativeai
+pydantic
+
+# Evaluation & Metrics
+scikit-learn
+tqdm
+jupyter
+ipykernel
